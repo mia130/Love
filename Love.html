@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Marc, mi Virtualito</title>
+  <style>
+    body {
+      background: linear-gradient(135deg, #a8edea, #fed6e3);
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      text-align: center;
+      padding: 50px;
+      color: #d6336c;
+    }
+    h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px #fff;
+    }
+    .virtualito {
+      font-size: 5em;
+      animation: bounce 1.5s infinite;
+      cursor: pointer;
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+    p {
+      font-size: 1.4em;
+      margin: 20px auto;
+      max-width: 400px;
+      background-color: #fff0f5;
+      padding: 15px;
+      border-radius: 20px;
+      box-shadow: 0 4px 10px rgba(214, 51, 108, 0.3);
+    }
+    button {
+      background-color: #d6336c;
+      color: white;
+      border: none;
+      padding: 15px 35px;
+      margin-top: 25px;
+      border-radius: 30px;
+      font-size: 1.3em;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(214, 51, 108, 0.5);
+      transition: background-color 0.3s, transform 0.2s;
+    }
+    button:hover {
+      background-color: #a82c54;
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+  <h1>Marc, mi Virtualito</h1>
+  <div class="virtualito" onclick="saludo()">💻❤️</div>
+  <p>¡Hola, Marc! Aunque estés en el mundo virtual, mi cariño por ti es 100% real.</p>
+  <p>Cada clic, cada mensaje, me haces sonreír más.</p>
+  <button onclick="juego()">Dame un abrazo virtual</button>
+
+  <script>
+    function saludo() {
+      alert("¡Hola, mi virtualito favorito! Te mando un beso digital.");
+    }
+    function juego() {
+      let respuesta = prompt("¿Cuántos abrazos virtuales quieres? (Escribe un número)");
+      if (respuesta && !isNaN(respuesta)) {
+        alert(`¡Aquí tienes ${respuesta} abrazos virtuales para ti, Marc! 🤗🤗🤗`);
+      } else {
+        alert("No entendí el número, pero igual te mando un abrazo fuerte.");
+      }
+    }
+  </script>
+</body>
+</html>
